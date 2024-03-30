@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-image: url('https://wallpaperaccess.com/full/2317497.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .conversation {
+            border-top: 1px solid #ccc;
+            padding: 20px;
+            margin: 0;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .conversation p {
+            margin: 10px 0;
+        }
+
+        .user {
+            color: #007bff;
+            text-align: left;
+        }
+
+        .chatbot {
+            color: #28a745;
+            text-align: left;
+            border: 2px solid #28a745;
+            border-radius: 12px;
+            padding: 10px;
+            background-color: #f0f8ff;
+        }
+
+        .chatbot::before {
+            content: "\f135";
+            font-family: "Font Awesome 5 Free";
+            margin-right: 10px;
+            color: #28a745;
+        }
+
+        .fa-user-md {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <h1><i class="fas fa-user-md"></i> Medical Chatbot</h1>
+        <form method="POST">
+            <label for="user_input">Ask a medical question:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Ask</button>
+        </form>
+        <div class="conversation">
+            {% if user_input %}
+                <p class="user"><strong>You:</strong> {{ user_input }}</p>
+                {% if chat_response %}
+                    <p class="chatbot"><strong>Chatbot:</strong> {{ chat_response }}</p>
+                {% else %}
+                    <p class="chatbot"><strong>Chatbot:</strong> No response from chatbot.</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

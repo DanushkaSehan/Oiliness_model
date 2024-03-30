@@ -1,0 +1,44 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
