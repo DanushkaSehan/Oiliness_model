@@ -2,70 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Upload and Prediction</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        /* Additional styling */
-        .navbar {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        .button-red {
-            background-color: #f44336;
-        }
-        .button-red:hover {
-            background-color: #d32f2f;
-        }
-        .button-blue {
-            background-color: #2196F3;
-        }
-        .button-blue:hover {
-            background-color: #1976D2;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="http://localhost:5000/chatbot" class="button">Further Details</a>
-
+            <a href="/webcam" class="button">Webcam</a>
+            <a href="/chatbot" class="button">Further Details</a>
             <a href="https://www.doc.lk/" class="button button-red">Contact the Doctor</a>
-            <a href="#" class="button button-blue">Help</a>
+            <a href="/#Contact" class="button button-blue">Help</a>
         </div>
-        <h1>Image Upload and Prediction</h1>
+        <h1><center>FACE GLOW INDEX</center></h1>
         <form action="/predict" method="post" enctype="multipart/form-data">
-            <h2>Upload Image</h2>
-            <input type="file" name="file">
-            <input type="submit" value="Upload" class="button">
+            <h2><center>Upload Image</center></h2>
+            <center><input type="file" name="file">
+            <input type="submit" value="Upload" class="button"></center>
         </form>
         {% if error %}
             <p class="error">Error: {{ error }}</p>
         {% endif %}
         {% if filename %}
-            <div class="result">
-                <h2>Prediction Result</h2>
-                <p>Confidence Level: {{ confidence_level }}%</p>
-                <p>OILYNESS Level: {{ oiliness_level }}</p>
+    
+        <div class="result">
+            <p class="centered">Prediction Result</p>
+            <p>Confidence Level: {{ confidence_level }}%</p>
+            <p>OILYNESS Level: {{ oiliness_level }}</p>
+            <div class="images-container">
                 <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+                {% if skin_filename %}
+                    <img src="{{ url_for('static', filename='uploads/' + skin_filename) }}" alt="Skin Detection Image">
+                {% endif %}
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
     </div>
 </body>
 </html>

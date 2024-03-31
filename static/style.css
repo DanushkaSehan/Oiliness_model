@@ -1,29 +1,67 @@
-/* static/style.css */
+/* style.css */
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    width: 100%;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: rgba(222, 221, 218, 0.8);
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    max-width: 40%;
+    max-height: 670px;
+    margin: 30px 20px auto 20px; /* Updated margin values (top, right/left, bottom) */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px; /* Use px instead of % for border-radius */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
-h1, h2 {
+
+.navbar {
+    position: absolute;
+    top:10px;
+    right: 30px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
-form {
-    margin-top: 20px;
+.button:hover {
+    background-color: #45a049;
 }
 
-input[type="file"] {
-    margin-bottom: 10px;
+.button-red {
+    background-color: #f44336;
+}
+
+.button-red:hover {
+    background-color: #d32f2f;
+}
+
+.button-blue {
+    background-color: #2196F3;
+}
+
+.button-blue:hover {
+    background-color: #1976D2;
 }
 
 .error {
@@ -32,13 +70,34 @@ input[type="file"] {
 }
 
 .result {
-    margin-top: 20px;
+    margin-top: 20px; /* Add more space above the result section */
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    margin-top: auto;
 }
 
 .result img {
-    max-width: 100%;
-    height: auto;
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* This will maintain the aspect ratio */
     margin-top: 10px;
     border-radius: 8px;
 }
+
+
+.centered {
+    text-align: center;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+}
+
+.images-container img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px; /* Add some space between the images */
+}
+

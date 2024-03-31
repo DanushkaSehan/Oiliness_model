@@ -1,0 +1,240 @@
+:root { --mavi: #6bc1f1 }
+header { background: url('img/glow1.gif') center/cover }
+.bg-mavi { background-color: var(--mavi) }
+.bg-goy{background-color: #072035;}
+.bg-boz { background-color: #4d4747 }
+.text-mavi { color: var(--mavi) }
+.vh-50 { min-height: 50vh; }
+.features:hover { opacity: 1;}
+.serviceimgs{ width: 100px; height: 100px;}
+.carousel-caption , .carousel-item {height: 200px;}
+.carousel-indicators button { width: 45px!important; height: 45px!important; border-radius: 50%; }
+.carousel-indicators button.active { width: 50px!important; height: 50px!important; }
+
+.carousel-inner h6 { text-transform: uppercase; letter-spacing: .1rem;color: #000476;}
+.carousel-inner p { text-transform: uppercase; color: rgba(205, 19, 19, 0.7);}
+
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 2px;
+    background: #ff0400;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.btn{
+    display: block;
+    font-size: 18px;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #d1d1d1;
+    background-color: #b90c09;
+    padding: 14px 50px;
+    border-radius:6px ;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    transition: background 0.5s;
+} 
+.btn-special{
+    display: block;
+    font-size: 18px;
+    margin-top: 60% ;
+    width: fit-content;
+    border: 1px solid #d1d1d1;
+    background-color: #b90c09;
+    padding: 4px 5px;
+    border-radius:7px ;
+    text-decoration: none;
+    color: #ffffff;
+    position:static;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #000476;
+    animation: bounce 1s infinite;
+}
+.btn i {
+    margin-left: 5px; 
+    transition: transform 0.4s ease;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.features {
+    position: relative;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background: linear-gradient(to right, #817b7b, #40423e);
+    color: rgb(2, 2, 2); 
+    padding: 20px; 
+    border-radius: 20%;
+    opacity: 0; 
+    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+.popup-text {
+    font-size: 34px; 
+}
+
+.features:hover .overlay {
+    opacity: 1; 
+    top: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bt1 { background: url("img/features-11.png") center/cover;}
+.bt2 { background: url("img/features-33.png") center/cover;}
+.bt3 { background: url("img/features-55.png") center/cover;}
+.bt4 { background: url("img/features-22.png") center/cover;}
+.bt5 { background: url("img/features-44.png") center/cover;}
+
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff0000;
+    margin-right:15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top:30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #fcfcfc;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: rgb(4, 255, 0);
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff0000;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #56565693;
+    padding: 15px;
+    margin: 15px 0;
+    color: #cf2020;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: #56565693;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #f40000;
+}
+
+#msg{
+    color: #ffffff;
+    margin-top: -40px;
+    display: block;
+}
+#Contact {
+    background-color: black;
+    color: white; 
+}
+
+#Contact a {
+    color: #e2e2e2; 
+}
+
+#Contact a:hover {
+    color: #ffffff;
+}
+.skin-website, .skin-facebook {
+    font-size: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/stare.png');
+    background-size: cover;
+}
+.rating input[type="radio"]:checked ~ label {
+    background-image: url('img/starf.png');
+
+}
+.smaller-btn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.feedback-container {
+    border: 2px solid #ede6e6; /* Adjust the color and size as needed */
+    border-radius: 10%;
+    padding: 10px; /* Adjust the padding as needed */
+    display: inline-block; /* Ensures the container only takes up as much width as necessary */
+}
+
+
+
