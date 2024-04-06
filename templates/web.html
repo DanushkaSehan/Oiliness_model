@@ -4,87 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-abc123..." crossorigin="anonymous" />
-    <title>Document</title>
     <style>
-        body{
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa; /* Updated background color */
         }
-        .navbar{height: 60px;}
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        .navbar-nav .nav-link {
+            color: #333; /* Dark text color */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107; /* Yellow hover color */
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
     </style>
 </head>
-    <body>
-        <header class="min-vh-100">
-            <nav class="navbar navbar-expand top bg-white bg-opacity-75">
-                <div class="container">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">
-                        <img src="static/img/Medical.png" alt="Medical logo" />
-                    </a>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#services">Services</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#portfolio">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#aboutus">About us</a>
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                      </li>-->
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#Contact">Contact</a>
-                      </li> 
-                    </ul>
-                    <!-- <a href="#" class="btn">Get Start</a> -->
-                  </div>
-                </div>
-            </nav>
+<body>
 
-            <div class="container vh-100 d-flex align-items-center justify-content-center">
-                <div class="row w-100">
-                    <div class="card col-lg-6 bg-transparent border-0 text-white" >
-                        <div class="card-body">
-                            <div class="head1">
-                            <h1 class="card-title display-3" style="font-size: 60px; color: rgb(130, 122, 122);"><u><b><b>Care for your <span style="color: rgb(63, 63, 63);">SKIN</span></b></b></u></h1>
-                            </div>
-                            <p class="card-text my-5" style="font-size: 18px; text-shadow: 
-                            -1px -1px 0 #000,  
-                            1px -1px 0 #000,
-                            -1px 1px 0 #000,
-                            1px 1px 0 #000;
-                            color: white;">
-                            <i><b>Welcome to our skin care haven! Discover the power of personalized skincare with our innovative oiliness level display. Unveil the secrets to a radiant complexion as we guide you through a journey of balance and beauty. Say goodbye to excess shine and hello to a luminous glow. Your skin's new best friend awaits.</b></i>
-                        </p>
-                                                    <a href="/index" class="btn">Get Started</a></button>
-                        </div>
-                    </div>
-                </div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/img/Medical.png" alt="Medical logo" width="50" height="50" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </nav>
 
+    <div class="container vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100">
+            <div class="card col-lg-6 text-center p-5">
+                <h1 class="card-title display-3 text-muted">Care for your <span class="text-dark">SKIN</span></h1>
+                <p class="card-text my-5 text-muted"><h5>Welcome to our skin care haven!</h5> Discover the power of personalized skincare with our innovative oiliness level display. Unveil the secrets to a radiant complexion as we guide you through a journey of balance and beauty. Say goodbye to excess shine and hello to a luminous glow. Your skin's new best friend awaits.</p>
+                <a href="/index" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+</header>
         <main>
             <div class="py-5">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6 ">
-                            <div class="card bg-transparent border-0" >
-                                <div class="card-body">
+                            <div class="card bg-transparent border-0">
+                                <div class="card-body" style="background-color: rgba(16, 103, 154, 0.2); border-radius: 10px; padding: 30px;">
                                     <h5 class="card-title text-mavi text-uppercase"><marquee><b>Welcome to <b>Face Glow Index</marquee></b></b></h5>
                                     <h2 class="card-subtitle mb-2" style="font-size: 18px; text-shadow: 0 2px 4px rgb(93, 91, 91);">Why you should choose us?</h2>
                                     <p class="card-text my-4">Choose us for unparalleled expertise in skincare tailored to your unique needs. Our commitment to excellence ensures you receive personalized solutions that deliver real results. With a blend of science-backed formulations and a passion for healthy, glowing skin, we're dedicated to helping you achieve your skincare goals effortlessly. Trust us to revolutionize your skincare routine and unlock the beauty within.</p>
-                                    <a href="https://cosmetics.lk/" button class="btn btn-info bg-mavi text-white border-0 rounded-0 text-uppercase" role="button"  >Get started now</a></button>
+                                    <a href="https://cosmetics.lk/" class="btn btn-info text-white text-uppercase rounded-pill px-5 py-3" role="button">Get started now</a>
+
                                 </div>
                             </div>
                         </div>
@@ -95,12 +100,12 @@
                 </div>
             </div>
             <section id="services">
-            <div class="bg-mavi">
+            <div class="bg-mavi" style="background-color: rgba(147, 151, 176, 0.5);">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 vh-50 d-flex align-items-center order-md-1">                            
+                        <div class="col-md-6 vh-50 d-flex align-items-center order-md-1" >                            
                             <div class="card bg-transparent border-0 text-white text-center mx-md-5 px-md-5" >
-                                <div class="card-body">
+                                <div class="card-body" style="background-color: rgba(89, 42, 158, 0.5); border-radius: 30px; padding: 10px 100px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
                                     <h6 class="card-title text-uppercase" style="color: black;">Features</h6>
                                     <h2 class="card-subtitle mb-2" style=" text-shadow: 0 2px 4px rgba(18, 17, 17, 0.5);">Skincare Chat Bot</h2>
                                     <p class="card-text my-4" style="font-size: 18px; text-shadow: 0 2px 4px rgba(33, 33, 33, 0.5);">Meet your personal skincare companion! Our chat bot is here to address your skin concerns with tailored solutions and expert advice. Simply input your issues, and let our intelligent bot guide you towards a healthier, radiant complexion.</p>
@@ -115,7 +120,7 @@
                         
                         <div class="col-md-6 vh-50 d-flex align-items-center order-md-1">
                             <div class="card bg-transparent border-0 text-white text-center mx-md-5 px-md-5 " >
-                                <div class="card-body">
+                                <div class="card-body" style="background-color: rgba(37, 53, 102, 0.6); border-radius: 30px;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
                                     <h6 class="card-title text-uppercase" style="color: black;">Features</h6>
                                     <h2 class="card-subtitle mb-2" style=" text-shadow: 0 2px 4px rgba(18, 17, 17, 0.5);">Specialist Doctor Channeling</h2>
                                     <p class="card-text my-4"style="font-size: 18px; text-shadow: 0 2px 4px rgba(33, 33, 33, 0.5);">Access expert care at your fingertips! With our platform, you can seamlessly connect with specialist doctors who can provide personalized consultations and guidance for your specific skin needs. Experience peace of mind knowing you're in trusted hands.</p>
@@ -155,11 +160,11 @@
             </div>
         </section>
             <section id="aboutus">
-            <div class="bg-mavi py-5">
+            <div class="bg-mavi py-5" style="background-color: rgba(69, 58, 65, 0.4);">
                 <div class="container">
                     <div class="col d-flex flex-column">
                         <div class="d-flex justify-content-center mb-5">
-                            <div class="card-body text-center text-white w-50 d-flex flex-column">
+                            <div class="card-body text-center text-black w-50 d-flex flex-column">
                                 <!-- <h1 class="card-title">''</h1> -->
                                 <p class="card-text" style="font-size: 18px; text-shadow: 0 2px 4px rgba(18, 17, 17, 0.5);">Behind our cutting-edge skincare platform stand a team of innovative creators, each with their own expertise and passion, driving our mission forward. From visionary UI/UX design to cloud development, machine learning, and security engineering, our team collaborates seamlessly to revolutionize the skincare experience. Together, we're dedicated to crafting a digital oasis where personalized solutions meet unparalleled user experience, empowering you to unlock the secrets to radiant, healthy skin effortlessly.</p>
                             </div>
@@ -225,7 +230,7 @@
                 <p style="text-align: center;font-size: 18px; text-shadow: 0 2px 4px rgba(240, 235, 235, 0.884);"><br><br>If you have any inquiries or encounter any issues, feel free to utilize our website or Facebook page at your convenience. Additionally, you can contact us through the direct message option via email for prompt assistance.</p ><br>
     
                 
-                <div class="container">
+                <div class="container" >
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="subtitle">Contact us.</h1>
@@ -366,3 +371,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
 </html>
+
